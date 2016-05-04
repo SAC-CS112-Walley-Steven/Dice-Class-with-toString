@@ -12,29 +12,26 @@ public class DiceTest {
 
 		int thrownDice = 0;
 		int throwAgain=0;
-		int oddDice=0, evenDice=0;
 		
 		do
 		{
 			thrownDice++;
 			dice.setNumOfThrows(thrownDice);
 			
-			int diceNum = dice.OneThrow();
+			int diceNum = Dice.OneThrow();
 			
-			System.out.println("\nThrow #"+thrownDice);
+			System.out.println("\nThrow #"+dice.getNumOfThrows());
 			System.out.print("Dice number is "+diceNum);
 			
 			if (diceNum % 2 == 0)
 			{
 				System.out.println("\nDice is Even");
-				evenDice++;
-				dice.setEvenDice(evenDice);
+				dice.setEvenDice();
 			}
 			else
 			{
 				System.out.println("\nDice is Odd");
-				oddDice++;
-				dice.setOddDice(oddDice);
+				dice.setOddDice();
 			}
 			
 			System.out.print("\n\nPress 1 to throw again, or 2 to exit: ");
