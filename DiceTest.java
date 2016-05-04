@@ -24,15 +24,10 @@ public class DiceTest {
 			System.out.print("Dice number is "+diceNum);
 			
 			if (diceNum % 2 == 0)
-			{
 				System.out.println("\nDice is Even");
-				dice.setEvenDice();
-			}
 			else
-			{
 				System.out.println("\nDice is Odd");
-				dice.setOddDice();
-			}
+			
 			
 			System.out.print("\n\nPress 1 to throw again, or 2 to exit: ");
 			throwAgain = input.nextInt();

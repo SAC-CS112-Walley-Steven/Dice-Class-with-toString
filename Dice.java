@@ -21,19 +21,15 @@ public class Dice {
 		return numOfThrows;
 	}
 	
-	public void setOddDice ()
-	{
-		oddDice++;
-	}
-	
-	public void setEvenDice ()
-	{
-		evenDice++;
-	}
-	
 	public static int OneThrow()
 	{
 		int randNum = 1+(int)(Math.random()*6);
+		{
+		if(randNum %2==0)
+			evenDice++;
+		else
+			oddDice++;
+		}	
 		return randNum;
 	}
 
