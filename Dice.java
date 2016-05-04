@@ -11,10 +11,6 @@ public class Dice {
 		this.evenDice = evenDice;
 	}
 	
-	public void setNumOfThrows (int numOfThrows)
-	{
-		this.numOfThrows = numOfThrows;
-	}
 	public int getNumOfThrows()
 	{
 		return numOfThrows;
