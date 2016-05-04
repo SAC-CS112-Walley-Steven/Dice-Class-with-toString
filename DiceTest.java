@@ -10,14 +10,11 @@ public class DiceTest {
 
 		System.out.println(dice);
 
-		int thrownDice = 0;
 		int throwAgain=0;
 		
 		do
 		{
-			thrownDice++;
-			dice.setNumOfThrows(thrownDice);
-			
+						
 			int diceNum = Dice.OneThrow();
 			
 			System.out.println("\nThrow #"+dice.getNumOfThrows());

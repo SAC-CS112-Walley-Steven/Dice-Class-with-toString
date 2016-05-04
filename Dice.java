@@ -1,7 +1,6 @@
-
 public class Dice {
 	
-	private int numOfThrows;
+	private static int numOfThrows;
 	private static int oddDice;
 	private static int evenDice;
 	
@@ -23,6 +22,8 @@ public class Dice {
 	
 	public static int OneThrow()
 	{
+		numOfThrows++;
+
 		int randNum = 1+(int)(Math.random()*6);
 		{
 		if(randNum %2==0)
@@ -41,7 +42,7 @@ public class Dice {
 	
 	public String toString()
 	{
-		return String.format("\nNum of times thrown: %d\nNum of Odd Dice: %d\nNum of Even Dice: %d",
+		return String.format("\n-Dice Attributes-\nNum of times thrown: %d\nNum of Odd Dice: %d\nNum of Even Dice: %d",
 				numOfThrows, oddDice, evenDice);
 	}
 }
