@@ -45,3 +45,4 @@ public class DiceTest {
 		System.out.println(dice);
 	}
 }
+// Good job...BTW, the evenDice, oddDice belong in the dice itself.
