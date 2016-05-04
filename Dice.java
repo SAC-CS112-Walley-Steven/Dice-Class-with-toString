@@ -41,6 +41,7 @@ public class Dice {
 	
 	public String toString()
 	{
-		return String.format("\nNo of times thrown: %d\nNum of Odd Dice: %d\nNum of Even Dice: %d", (numOfThrows-1), oddDice, evenDice);
+		return String.format("\nNum of times thrown: %d\nNum of Odd Dice: %d\nNum of Even Dice: %d", 
+			(numOfThrows-1), oddDice, evenDice);
 	}
 }
