@@ -1,9 +1,8 @@
-
 public class Dice {
 	
 	private int numOfThrows;
-	private int oddDice;
-	private int evenDice;
+	private static int oddDice;
+	private static int evenDice;
 	
 	public Dice (int numOfThrows, int oddDice, int evenDice)
 	{
@@ -14,22 +13,22 @@ public class Dice {
 	
 	public void setNumOfThrows (int numOfThrows)
 	{
-		this.numOfThrows = numOfThrows + 1;
+		this.numOfThrows = numOfThrows;
 	}
-	
-	public void setOddDice (int oddDice)
+	public int getNumOfThrows()
 	{
-		this.oddDice = oddDice;
-	}
-	
-	public void setEvenDice (int evenDice)
-	{
-		this.evenDice = evenDice;
+		return numOfThrows;
 	}
 	
 	public static int OneThrow()
 	{
 		int randNum = 1+(int)(Math.random()*6);
+		{
+		if(randNum %2==0)
+			evenDice++;
+		else
+			oddDice++;
+		}	
 		return randNum;
 	}
 
@@ -41,6 +40,7 @@ public class Dice {
 	
 	public String toString()
 	{
-		return String.format("\nNo of times thrown: %d\nNum of Odd Dice: %d\nNum of Even Dice: %d", (numOfThrows-1), oddDice, evenDice);
+		return String.format("\nNum of times thrown: %d\nNum of Odd Dice: %d\nNum of Even Dice: %d",
+				numOfThrows, oddDice, evenDice);
 	}
 }
